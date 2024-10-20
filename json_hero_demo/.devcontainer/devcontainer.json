@@ -1,0 +1,22 @@
+{
+	"name": "Node.js & jsonhero-web",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-20",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	"postCreateCommand": "./setup.sh",
+	"containerEnv": {
+		"SESSION_SECRET": "${SESSION_SECRET}"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	},
+	"forwardPorts": [
+		3000
+	],
+	"remoteUser": "node"
+}
